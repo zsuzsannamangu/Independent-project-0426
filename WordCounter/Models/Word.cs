@@ -27,7 +27,6 @@ namespace WordCount.Models
     {
       return _sentence;
     }
-
     // public string GetWords()
     // {
     //   return _words;
@@ -53,6 +52,26 @@ namespace WordCount.Models
         return false;
       }
     }
+    
+    List<string> wordList = new List<string> {};
+
+    public List<string> SplitSentenceToWords(string words, string sentence)
+    {
+      // string words = "";
+      char[] sentenceArray = sentence.ToCharArray();
+      foreach (char letter in sentenceArray)
+      {
+        if (letter != ' ')
+        {
+          words += letter;
+          // word = String.Join("", letter)
+        }
+        else {
+          wordList.Add(words);
+        }
+      }
+      return wordList;
+    }
 
     public bool IsThereAMatch(string word, string sentence)
     {
@@ -67,35 +86,7 @@ namespace WordCount.Models
           return false;
         }
       }
-    }
-
-    public List<string> SplitSentenceToWords(string words, string sentence)
-    {
-      // string words = "";
-      //split sentence into characters, an array of characters are made
-      //sentence is "how are you"
-      char[] sentenceArray = sentence.ToCharArray();
-      //create an empty array/list for the words to go into
-      List<string> wordList = new List<string> {};
-      //how, are, you
-      //characters of sentence needs to rejoin into words before spaces then go into wordList if they equal to THE WORD
-      foreach (char letter in sentenceArray)
-      {
-        // how, are, you = w
-        if (letter != ' ')
-        {
-          // word = ho + w so that will be word = how
-          words += letter;
-          // word = String.Join("", letter)
-        }
-        // now the next letter is space, so the word "how" is going to the list(array) called wordList
-        else {
-          wordList.Add(words);
-          // string words = "";
-        }
-      }
-      return wordList;
-      //how, are, you
+      return false;
     }
   }
 }
