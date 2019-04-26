@@ -76,18 +76,20 @@ namespace WordCount.Models
 
     public bool IsThereAMatch(string word, string sentence)
     {
+      // int total = 0;
+
       foreach (string words in wordList)
       {
         if (word == words)
         {
           return true;
-        }
-        else
-        {
-          return false;
+          // return total++;
         }
       }
       return false;
+      // return total;
     }
+
+    // int total = IsThereAMatch(SplitSentenceToWords(sentence, word));
   }
 }
