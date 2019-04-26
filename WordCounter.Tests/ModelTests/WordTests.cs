@@ -10,10 +10,10 @@ namespace WordCount.Tests
   {
 
     [TestMethod]
-    public void IsThereAMatch_WordsThatMatch_True()
+    public void DoTheWordsMatch_WordsThatMatch_True()
     {
       //Arrange
-      Word newWord = new Word("test");
+      Word newWord = new Word("test", "test");
 
       //Act
       bool result = newWord.IsThereAMatch("you", "you");
@@ -26,7 +26,7 @@ namespace WordCount.Tests
     public void SplitsSentenceToWords_WordsThatMatch_True()
     {
       //Arrange
-      Word newWord = new Word("test");
+      Word newWord = new Word("test", "test");
 
       //Act
       bool result = newWord.SplitsSentenceToWords("you", "how are you");
@@ -34,18 +34,18 @@ namespace WordCount.Tests
       //Assert
       Assert.AreEqual(true, result);
     }
-      // [TestMethod]
-      //
-      // public void ValueToMatch_WhatIsTheValueOfALetterS_Number()
-      // {
-      //   //Arrange
-      //   Word newWord = new Word("apple");
-      //
-      //   //Act
-      //   int result = newWord.ValueToMatch("apple");
-      //
-      //   //Assert
-      //   Assert.AreEqual(8, result);
 
+    [TestMethod]
+    public void IsThereAMatch_WordsThatMatch_True()
+    {
+      //Arrange
+      Word newWord = new Word("test", "test");
+
+      //Act
+      bool result = newWord.IsThereAMatch("you", "how are you");
+
+      //Assert
+      Assert.AreEqual(true, result);
+    }
   }
 }
