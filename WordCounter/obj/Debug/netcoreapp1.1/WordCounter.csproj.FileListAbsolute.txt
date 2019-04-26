@@ -1,0 +1,7 @@
+/Users/zsuzsannamangu/Desktop/Epicodus/WordCounter.Solution/WordCounter/bin/Debug/netcoreapp1.1/WordCounter.deps.json
+/Users/zsuzsannamangu/Desktop/Epicodus/WordCounter.Solution/WordCounter/obj/Debug/netcoreapp1.1/WordCounter.csproj.CoreCompileInputs.cache
+/Users/zsuzsannamangu/Desktop/Epicodus/WordCounter.Solution/WordCounter/obj/Debug/netcoreapp1.1/WordCounter.AssemblyInfo.cs
+/Users/zsuzsannamangu/Desktop/Epicodus/WordCounter.Solution/WordCounter/bin/Debug/netcoreapp1.1/WordCounter.dll
+/Users/zsuzsannamangu/Desktop/Epicodus/WordCounter.Solution/WordCounter/bin/Debug/netcoreapp1.1/WordCounter.pdb
+/Users/zsuzsannamangu/Desktop/Epicodus/WordCounter.Solution/WordCounter/obj/Debug/netcoreapp1.1/WordCounter.dll
+/Users/zsuzsannamangu/Desktop/Epicodus/WordCounter.Solution/WordCounter/obj/Debug/netcoreapp1.1/WordCounter.pdb

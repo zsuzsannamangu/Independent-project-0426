@@ -10,36 +10,42 @@ namespace WordCount.Tests
   {
 
     [TestMethod]
-    public void WordConstructor_CreatesInstanceOfWord_Word()
+    public void IsThereAMatch_WordsThatMatch_True()
     {
+      //Arrange
       Word newWord = new Word("test");
-      Assert.AreEqual(typeof(Word), newWord.GetType());
+
+      //Act
+      bool result = newWord.IsThereAMatch("you", "you");
+
+      //Assert
+      Assert.AreEqual(true, result);
     }
 
     [TestMethod]
-    public void ValueToMatch_WhatIsTheValueOfALetter_Number()
+    public void SplitsSentenceToWords_WordsThatMatch_True()
     {
       //Arrange
-      Word newWord = new Word("b");
+      Word newWord = new Word("test");
 
       //Act
-      int result = newWord.ValueToMatch("b");
+      bool result = newWord.SplitsSentenceToWords("you", "how are you");
 
       //Assert
-      Assert.AreEqual(2, result);
+      Assert.AreEqual(true, result);
     }
-      [TestMethod]
+      // [TestMethod]
+      //
+      // public void ValueToMatch_WhatIsTheValueOfALetterS_Number()
+      // {
+      //   //Arrange
+      //   Word newWord = new Word("apple");
+      //
+      //   //Act
+      //   int result = newWord.ValueToMatch("apple");
+      //
+      //   //Assert
+      //   Assert.AreEqual(8, result);
 
-      public void ValueToMatch_WhatIsTheValueOfALetterS_Number()
-      {
-        //Arrange
-        Word newWord = new Word("apple");
-
-        //Act
-        int result = newWord.ValueToMatch("apple");
-
-        //Assert
-        Assert.AreEqual(8, result);
-    }
   }
 }
