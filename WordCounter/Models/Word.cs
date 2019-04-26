@@ -41,30 +41,31 @@ namespace WordCount.Models
     // {
     //   _instances.Clear();
     // }
-    public bool DoTheWordsMatch(string word, string sentence)
-    {
-      if (word == sentence)
-      {
-        return true;
-      }
-      else
-      {
-        return false;
-      }
-    }
-    
-    List<string> wordList = new List<string> {};
+    // public bool DoTheWordsMatch(string word, string sentence)
+    // {
+    //   if (word == sentence)
+    //   {
+    //     return true;
+    //   }
+    //   else
+    //   {
+    //     return false;
+    //   }
+    // }
 
-    public List<string> SplitSentenceToWords(string words, string sentence)
+    public List<string> SplitSentenceToWords(string word, string sentence)
     {
-      // string words = "";
+
+      string words = "";
       char[] sentenceArray = sentence.ToCharArray();
+      List<string> wordList = new List<string> {};
+
       foreach (char letter in sentenceArray)
       {
         if (letter != ' ')
         {
-          words += letter;
-          // word = String.Join("", letter)
+          // words += letter;
+          words = String.Join("", letter);
         }
         else {
           wordList.Add(words);
