@@ -16,7 +16,7 @@ namespace WordCount.Tests
       Word newWord = new Word("test", "test");
 
       //Act
-      bool result = newWord.IsThereAMatch("you", "you");
+      bool result = newWord.DoTheWordsMatch("you", "you");
 
       //Assert
       Assert.AreEqual(true, result);
