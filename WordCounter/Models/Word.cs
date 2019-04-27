@@ -3,30 +3,30 @@ using System.Collections.Generic;
 
 namespace WordCount.Models
 {
-  public class Word
+  public class Machine
   {
-    private string _word;
-    private string _sentence;
+    // private string _word;
+    // private string _sentence;
     // private string _words;
     // private static List<Word> _instances = new List<Word> {};
 
-    public Word (string word, string sentence)
+    public Machine ()
     {
-      _word = word;
-      _sentence = sentence;
+      // _word = word;
+      // _sentence = sentence;
       // _words = words;
       // _instances.Add(this);
     }
 
-    public string GetWord()
-    {
-      return _word;
-    }
-
-    public string GetSentence()
-    {
-      return _sentence;
-    }
+    // public string GetWord()
+    // {
+    //   return _word;
+    // }
+    //
+    // public string GetSentence()
+    // {
+    //   return _sentence;
+    // }
     // public string GetWords()
     // {
     //   return _words;
@@ -53,42 +53,47 @@ namespace WordCount.Models
     //   }
     // }
 
-    public List<string> SplitSentenceToWords(string word, string sentence)
+    public List<string> SplitSentenceToWords(string sentence)
     {
 
-      string words = "";
       char[] sentenceArray = sentence.ToCharArray();
       List<string> wordList = new List<string> {};
 
+      string word = "";
       foreach (char letter in sentenceArray)
       {
-        if (letter != ' ')
+        if (letter == ' ')
         {
-          // words += letter;
-          words = String.Join("", letter);
+          wordList.Add(word);
+          word = "";
         }
         else {
-          wordList.Add(words);
+          word += letter;
         }
+        // Console.WriteLine(word);
+      }
+      if (word != "")
+      {
+        wordList.Add(word);
       }
       return wordList;
     }
 
-    public bool IsThereAMatch(string word, string sentence)
-    {
-      // int total = 0;
-
-      foreach (string words in wordList)
-      {
-        if (word == words)
-        {
-          return true;
-          // return total++;
-        }
-      }
-      return false;
-      // return total;
-    }
+    // public bool IsThereAMatch(string word, string sentence)
+    // {
+    //   // int total = 0;
+    //
+    //   foreach (string words in wordList)
+    //   {
+    //     if (word == words)
+    //     {
+    //       return true;
+    //       // return total++;
+    //     }
+    //   }
+    //   return false;
+    //   // return total;
+    // }
 
     // int total = IsThereAMatch(SplitSentenceToWords(sentence, word));
   }
