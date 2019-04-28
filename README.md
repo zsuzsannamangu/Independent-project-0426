@@ -12,10 +12,10 @@
 
 | Behavior | Input | Output |
 | ------------- |:-------------:| -----:|
-| It checks whether two words are matching | 1: you, 2: you | true |
-| It checks whether a word appears inside of a list of words | 1: you 2: how are you | true |
-| It checks how many times a word appears inside of a list of words | 1: you 2: how are you and you | 2 |
-| It checks for full word matches only, not matching characters in a word | 1: cat 2: I'm walking to the cathedral. | 0 |
+| It checks whether two words are matching | 1: hello, 2: hello | true |
+| It splits the sentence into words | 1: hello, there 2: hello there | equal |
+| It checks whether a word appears inside of a list of words | 1: there 2: hello there | true |
+| It checks how many times a word appears inside of a list of words | 1: there 2: therer there hello there | 2 |
 
 ## Setup/Installation Requirements
 

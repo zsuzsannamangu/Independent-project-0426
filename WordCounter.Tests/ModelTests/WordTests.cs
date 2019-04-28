@@ -23,7 +23,7 @@ namespace WordCount.Tests
     }
 
     [TestMethod]
-    public void SplitSentenceToWords_ListsMatch_True()
+    public void SplitSentenceToWords_ListsMatch_Equal()
     {
       //Arrange
       Machine machine = new Machine();
