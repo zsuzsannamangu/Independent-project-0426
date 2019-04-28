@@ -13,27 +13,14 @@ namespace WordCount.Tests
     public void DoTheWordsMatch_WordsThatMatch_True()
     {
       //Arrange
-      Word newWord = new Word("test", "test");
+      Machine machine = new Machine();
 
       //Act
-      bool result = newWord.DoTheWordsMatch("you", "you");
+      bool result = machine.DoTheWordsMatch("hello", "hello");
 
       //Assert
       Assert.AreEqual(true, result);
     }
-
-    // [TestMethod]
-    // public void SplitsSentenceToWords_WordsThatMatch_True()
-    // {
-    //   //Arrange
-    //   Word newWord = new Word("test", "test");
-    //
-    //   //Act
-    //   bool result = newWord.SplitsSentenceToWords("you", "how are you");
-    //
-    //   //Assert
-    //   Assert.AreEqual(true, result);
-    // }
 
     [TestMethod]
     public void SplitSentenceToWords_ListsMatch_True()
