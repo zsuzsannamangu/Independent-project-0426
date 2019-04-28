@@ -9,18 +9,18 @@ namespace WordCount.Tests
   public class WordCountTest
   {
 
-    // [TestMethod]
-    // public void DoTheWordsMatch_WordsThatMatch_True()
-    // {
-    //   //Arrange
-    //   Word newWord = new Word("test", "test");
-    //
-    //   //Act
-    //   bool result = newWord.DoTheWordsMatch("you", "you");
-    //
-    //   //Assert
-    //   Assert.AreEqual(true, result);
-    // }
+    [TestMethod]
+    public void DoTheWordsMatch_WordsThatMatch_True()
+    {
+      //Arrange
+      Word newWord = new Word("test", "test");
+
+      //Act
+      bool result = newWord.DoTheWordsMatch("you", "you");
+
+      //Assert
+      Assert.AreEqual(true, result);
+    }
 
     // [TestMethod]
     // public void SplitsSentenceToWords_WordsThatMatch_True()
@@ -46,6 +46,9 @@ namespace WordCount.Tests
       // Act
       List<string> words = machine.SplitSentenceToWords("hello there");
 
+      //Assert
+      CollectionAssert.AreEqual(words, check);
+
       // Console.WriteLine("SplitSentenceToWords:");
       // foreach (string word in words)
       // {
@@ -59,10 +62,31 @@ namespace WordCount.Tests
       // {
       //   Console.WriteLine(c);
       // }
+    }
+    [TestMethod]
+    public void IsThereAMatch_DoTheWordsMatch_True()
+    {
+      //Arrange
+      Machine machine = new Machine();
 
+      // Act
+      bool answer = machine.IsThereAMatch("there", "hello there");
 
       //Assert
-      CollectionAssert.AreEqual(words, check);
+      Assert.AreEqual(true, answer);
+    }
+
+    [TestMethod]
+    public void WordCount_HowManyMatchingWordsAreThere_2()
+    {
+      //Arrange
+      Machine machine = new Machine();
+
+      // Act
+      int answer = machine.WordCount("there", "therer there hello there");
+
+      //Assert
+      Assert.AreEqual(2, answer);
     }
   }
 }

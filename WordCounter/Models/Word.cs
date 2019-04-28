@@ -10,13 +10,13 @@ namespace WordCount.Models
     // private string _words;
     // private static List<Word> _instances = new List<Word> {};
 
-    public Machine ()
-    {
-      // _word = word;
-      // _sentence = sentence;
-      // _words = words;
-      // _instances.Add(this);
-    }
+    // public Machine ()
+    // {
+    //   // _word = word;
+    //   // _sentence = sentence;
+    //   // _words = words;
+    //   // _instances.Add(this);
+    // }
 
     // public string GetWord()
     // {
@@ -41,17 +41,17 @@ namespace WordCount.Models
     // {
     //   _instances.Clear();
     // }
-    // public bool DoTheWordsMatch(string word, string sentence)
-    // {
-    //   if (word == sentence)
-    //   {
-    //     return true;
-    //   }
-    //   else
-    //   {
-    //     return false;
-    //   }
-    // }
+    public bool DoTheWordsMatch(string word, string sentence)
+    {
+      if (word == sentence)
+      {
+        return true;
+      }
+      else
+      {
+        return false;
+      }
+    }
 
     public List<string> SplitSentenceToWords(string sentence)
     {
@@ -79,22 +79,37 @@ namespace WordCount.Models
       return wordList;
     }
 
-    // public bool IsThereAMatch(string word, string sentence)
-    // {
-    //   // int total = 0;
-    //
-    //   foreach (string words in wordList)
-    //   {
-    //     if (word == words)
-    //     {
-    //       return true;
-    //       // return total++;
-    //     }
-    //   }
-    //   return false;
-    //   // return total;
-    // }
+    public bool IsThereAMatch(string matchWord, string sentence)
+    {
+      // int total = 0;
 
-    // int total = IsThereAMatch(SplitSentenceToWords(sentence, word));
+      List<string> wordList = SplitSentenceToWords(sentence);
+
+      foreach (string word in wordList)
+      {
+        if (word == matchWord)
+        {
+          return true;
+        }
+      }
+      return false;
+    }
+
+    public int WordCount(string matchWord, string sentence)
+    {
+      int total = 0;
+
+      List<string> wordList = SplitSentenceToWords(sentence);
+
+      foreach (string word in wordList)
+      {
+        if (word == matchWord)
+        {
+          total++;
+        }
+      }
+      return total;
+    }
+
   }
 }
