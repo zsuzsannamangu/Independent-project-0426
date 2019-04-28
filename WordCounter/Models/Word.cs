@@ -43,10 +43,8 @@ namespace WordCount.Models
       return wordList;
     }
 
-    public bool IsThereAMatch(string matchWord, string sentence)
+    public bool IsThereAMatch(string matchWord, List<string> wordList)
     {
-
-      List<string> wordList = SplitSentenceToWords(sentence);
 
       foreach (string word in wordList)
       {

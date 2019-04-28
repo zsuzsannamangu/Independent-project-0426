@@ -57,7 +57,7 @@ namespace WordCount.Tests
       Machine machine = new Machine();
 
       // Act
-      bool answer = machine.IsThereAMatch("there", "hello there");
+      bool answer = machine.IsThereAMatch("there", machine.SplitSentenceToWords("hello there"));
 
       //Assert
       Assert.AreEqual(true, answer);
