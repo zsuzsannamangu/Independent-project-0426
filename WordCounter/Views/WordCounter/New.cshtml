@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>Word Counter</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="~/css/styles.css"/>
+  </head>
+  <body>
+    <div class="text-center">
+      <h1>See how many times your word appears in your sentence!</h1>
+      <form action="/wordcounter" method="post">
+        <label for="word">Your word</label>
+        <input id="word" name="word" type="text">
+        <label for="sentence">Your sentence</label>
+        <input id="sentence" name="sentence" type="text">
+        <button type="submit">Count</button>
+      </form>
+    </div>
+  </body>
+</html>

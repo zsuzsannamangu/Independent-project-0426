@@ -7,11 +7,11 @@ namespace WordCount.Controllers
   public class WordCounterController : Controller
   {
 
-    [HttpGet("/wordcounter")]
-    public ActionResult Index()
-    {
-      return View();
-    }
+    // [HttpGet("/wordcounter")]
+    // public ActionResult Index()
+    // {
+    //   return View();
+    // }
 
     [HttpGet("/wordcounter/new")]
     public ActionResult New()
@@ -20,9 +20,11 @@ namespace WordCount.Controllers
     }
 
     [HttpPost("/wordcounter")]
-    public ActionResult Create()
+    public ActionResult Create(string word, string sentence)
     {
-      return View();
+      Machine newMachine = new Machine(word, sentence);
+      return View(newMachine);
     }
+
   }
 }

@@ -5,6 +5,35 @@ namespace WordCount.Models
 {
   public class Machine
   {
+    private string _word;
+    private string _sentence;
+    // private string _matchWord;
+
+    public Machine (string word, string sentence)
+    {
+      _word = word;
+      _sentence = sentence;
+      // _matchWord = matchWord;
+    }
+
+    public string GetWord()
+    {
+      return _word;
+    }
+
+    public string GetSentence()
+    {
+      return _sentence;
+    }
+
+    // public string GetMatchWord()
+    // {
+    //   return _matchWord;
+    // }
+
+    // public string Word {get => _word; set => _word = value;}
+    // public string Sentence {get => _sentence; set => _sentence = value;}
+
     public bool DoTheWordsMatch(string word, string sentence)
     {
       if (word == sentence)
