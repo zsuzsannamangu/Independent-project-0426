@@ -1,5 +1,11 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace WordCount.Models
 {
@@ -7,13 +13,11 @@ namespace WordCount.Models
   {
     private string _word;
     private string _sentence;
-    // private string _matchWord;
 
     public Machine (string word, string sentence)
     {
       _word = word;
       _sentence = sentence;
-      // _matchWord = matchWord;
     }
 
     public string GetWord()
@@ -25,14 +29,6 @@ namespace WordCount.Models
     {
       return _sentence;
     }
-
-    // public string GetMatchWord()
-    // {
-    //   return _matchWord;
-    // }
-
-    // public string Word {get => _word; set => _word = value;}
-    // public string Sentence {get => _sentence; set => _sentence = value;}
 
     public bool DoTheWordsMatch(string word, string sentence)
     {

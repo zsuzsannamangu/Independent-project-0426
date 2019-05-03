@@ -7,11 +7,11 @@ namespace WordCount.Controllers
   public class WordCounterController : Controller
   {
 
-    // [HttpGet("/wordcounter")]
-    // public ActionResult Index()
-    // {
-    //   return View();
-    // }
+    [HttpGet("/wordcounter")]
+    public ActionResult Index()
+    {
+      return View();
+    }
 
     [HttpGet("/wordcounter/new")]
     public ActionResult New()
@@ -22,8 +22,15 @@ namespace WordCount.Controllers
     [HttpPost("/wordcounter")]
     public ActionResult Create(string word, string sentence)
     {
+      if (sentence.Contains(".") || sentence.Contains("?") || sentence.Contains("!") || sentence.Contains(",") || sentence.Contains(";"))
+      {
+        return View("Invalid");
+      }
+      else
+      {
       Machine newMachine = new Machine(word, sentence);
       return View("Index", newMachine);
+      }
     }
 
   }

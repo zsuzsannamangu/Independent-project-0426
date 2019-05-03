@@ -10,9 +10,19 @@ namespace WordCount.Tests
   public class HomeControllerTest
   {
     [TestMethod]
-    public void Index_ReturnsCorrectView_True()
+    public void HomeIndex_ReturnsCorrectView_True()
     {
       HomeController controller = new HomeController();
+
+      ActionResult indexView = controller.Index();
+
+      Assert.IsInstanceOfType(indexView, typeof(ViewResult));
+    }
+
+    [TestMethod]
+    public void WordCounterIndex_ReturnsCorrectView_True()
+    {
+      WordCounterController controller = new WordCounterController();
 
       ActionResult indexView = controller.Index();
 

@@ -23,3 +23,4 @@
 /Users/zsuzsannamangu/Desktop/Epicodus/WordCounter.Solution/WordCounter/obj/Debug/netcoreapp2.2/WordCounter.pdb
 /Users/zsuzsannamangu/Desktop/Epicodus/WordCounter.Solution/WordCounter/obj/Debug/netcoreapp2.2/WordCounter.csproj.CopyComplete
 /Users/zsuzsannamangu/Desktop/Epicodus/WordCounter.Solution/WordCounter/obj/Debug/netcoreapp2.2/Razor/Views/WordCounter/New.g.cshtml.cs
+/Users/zsuzsannamangu/Desktop/Epicodus/WordCounter.Solution/WordCounter/obj/Debug/netcoreapp2.2/Razor/Views/WordCounter/Invalid.g.cshtml.cs
