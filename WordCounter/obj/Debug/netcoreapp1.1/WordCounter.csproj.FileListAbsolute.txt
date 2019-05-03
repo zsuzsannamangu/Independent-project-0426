@@ -5,3 +5,5 @@
 /Users/zsuzsannamangu/Desktop/Epicodus/WordCounter.Solution/WordCounter/bin/Debug/netcoreapp1.1/WordCounter.pdb
 /Users/zsuzsannamangu/Desktop/Epicodus/WordCounter.Solution/WordCounter/obj/Debug/netcoreapp1.1/WordCounter.dll
 /Users/zsuzsannamangu/Desktop/Epicodus/WordCounter.Solution/WordCounter/obj/Debug/netcoreapp1.1/WordCounter.pdb
+/Users/zsuzsannamangu/Desktop/Epicodus/WordCounter.Solution/WordCounter/obj/Debug/netcoreapp1.1/WordCounter.csprojAssemblyReference.cache
+/Users/zsuzsannamangu/Desktop/Epicodus/WordCounter.Solution/WordCounter/obj/Debug/netcoreapp1.1/WordCounter.AssemblyInfoInputs.cache
