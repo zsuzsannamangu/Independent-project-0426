@@ -23,7 +23,7 @@ namespace WordCount.Controllers
     public ActionResult Create(string word, string sentence)
     {
       Machine newMachine = new Machine(word, sentence);
-      return View(newMachine);
+      return View("Index", newMachine);
     }
 
   }

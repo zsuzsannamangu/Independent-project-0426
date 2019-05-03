@@ -15,3 +15,8 @@
 /Users/zsuzsannamangu/Desktop/Epicodus/WordCounter.Solution/WordCounter.Tests/obj/Debug/netcoreapp2.2/WordCounter.Tests.csproj.CopyComplete
 /Users/zsuzsannamangu/Desktop/Epicodus/WordCounter.Solution/WordCounter.Tests/obj/Debug/netcoreapp2.2/WordCounter.Tests.dll
 /Users/zsuzsannamangu/Desktop/Epicodus/WordCounter.Solution/WordCounter.Tests/obj/Debug/netcoreapp2.2/WordCounter.Tests.pdb
+/Users/zsuzsannamangu/Desktop/Epicodus/WordCounter.Solution/WordCounter.Tests/bin/Debug/netcoreapp2.2/WordCounter.Views.dll
+/Users/zsuzsannamangu/Desktop/Epicodus/WordCounter.Solution/WordCounter.Tests/bin/Debug/netcoreapp2.2/WordCounter.Views.pdb
+/Users/zsuzsannamangu/Desktop/Epicodus/WordCounter.Solution/WordCounter.Tests/obj/Debug/netcoreapp2.2/WordCounter.Tests.RazorAssemblyInfo.cache
+/Users/zsuzsannamangu/Desktop/Epicodus/WordCounter.Solution/WordCounter.Tests/obj/Debug/netcoreapp2.2/WordCounter.Tests.RazorAssemblyInfo.cs
+/Users/zsuzsannamangu/Desktop/Epicodus/WordCounter.Solution/WordCounter.Tests/obj/Debug/netcoreapp2.2/WordCounter.Tests.RazorTargetAssemblyInfo.cache
