@@ -1,17 +1,9 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset='utf-8'>
-    <title>Word Counter</title>
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
-    <link rel="stylesheet" href="~/css/styles.css"/>
-  </head>
-  <body>
-    <div class="text-center">
-      <h1>The word "@Model.GetWord()" appears in your sentence @Model.WordCount(@Model.GetWord(), @Model.GetSentence()) times!</h1>
-
-      <p><a href='/wordcounter/new'>Count a new word!</a></p>
-      <p><a href='/'>Back to homepage</a></p>
-    </div>
-  </body>
-</html>
+@{
+  Layout = "_Layout";
+}
+<div class="text-center">
+  <h1>The word "@Model.GetWord()" appears in your sentence @Model.WordCount(@Model.GetWord(), @Model.GetSentence()) times!</h1>
+  <br>
+  <button><a href='/wordcounter/new'>Count a new word!</a></button>
+  <button><a href='/'>Back to homepage</a></button>
+</div>
