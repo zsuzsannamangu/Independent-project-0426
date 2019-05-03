@@ -40,6 +40,17 @@ namespace WordCount.Tests
     }
 
     [TestMethod]
+    public void Show_ReturnsCorrectView_True()
+    {
+      WordCounterController controller = new WordCounterController();
+
+      ActionResult newView = controller.Show();
+
+      Assert.IsInstanceOfType(newView, typeof(ViewResult));
+    }
+
+
+    [TestMethod]
     public void Create_ReturnsCorrectActionType_ViewResult()
     {
       WordCounterController controller = new WordCounterController();
