@@ -28,7 +28,7 @@ namespace WordCount.Controllers
     [HttpPost("/wordcounter")]
     public ActionResult Create(string word, string sentence)
     {
-      if (sentence.Contains(".") || sentence.Contains("?") || sentence.Contains("!") || sentence.Contains(",") || sentence.Contains(";"))
+      if (sentence.Contains('.') || sentence.Contains('?') || sentence.Contains('!') || sentence.Contains(',') || sentence.Contains(';') || word.Contains(' '))
       {
         return View("Invalid");
       }
