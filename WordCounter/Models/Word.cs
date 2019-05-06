@@ -42,6 +42,35 @@ namespace WordCount.Models
       }
     }
 
+    public bool IsValidChar(char thisChar)
+    {
+      if (Char.IsLetter(thisChar) || Char.IsNumber(thisChar))
+      {
+        return true;
+      }
+      else
+      {
+        return false;
+      }
+    }
+
+    public string StripPunct(string s)
+    {
+      char[] wordArray = s.ToCharArray();
+      string word = "";
+      for (int i=0; i<wordArray.Length; i++) {
+        if ((i == 0 || i == wordArray.Length-1) && IsValidChar(wordArray[i]))
+        {
+          word += wordArray[i];
+        }
+        if (i != 0 && i != wordArray.Length-1)
+        {
+          word += wordArray[i];
+        }
+      }
+      return word;
+    }
+
     public List<string> SplitSentenceToWords(string sentence)
     {
 
@@ -59,7 +88,6 @@ namespace WordCount.Models
         else {
           word += letter;
         }
-        // Console.WriteLine(word);
       }
       if (word != "")
       {
@@ -89,7 +117,7 @@ namespace WordCount.Models
 
       foreach (string word in wordList)
       {
-        if (word == matchWord)
+        if (StripPunct(word) == matchWord)
         {
           total++;
         }
